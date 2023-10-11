@@ -1,0 +1,15 @@
+[submodule "dotfiles/vim/pack/coding/start/asyncrun"]
+	path = dotfiles/vim/pack/coding/start/asyncrun
+	url = https://github.com/skywind3000/asyncrun.vim
+[submodule "dotfiles/vim/pack/coding/start/asynctasks"]
+	path = dotfiles/vim/pack/coding/start/asynctasks
+	url = https://github.com/skywind3000/asynctasks.vim
+[submodule "dotfiles/vim/pack/coding/start/YouCompleteMe"]
+	path = dotfiles/vim/pack/coding/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "dotfiles/vim/pack/coding/start/ale"]
+	path = dotfiles/vim/pack/coding/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "dotfiles/vim/pack/vcs/start/vim-fugitive"]
+	path = dotfiles/vim/pack/vcs/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git

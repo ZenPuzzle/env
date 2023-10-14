@@ -13,3 +13,24 @@
 [submodule "dotfiles/vim/pack/vcs/start/vim-fugitive"]
 	path = dotfiles/vim/pack/vcs/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "dotfiles/vim/pack/coding/start/tcomment_vim"]
+	path = dotfiles/vim/pack/coding/start/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim
+[submodule "dotfiles/vim/pack/colors/start/gruvbox8"]
+	path = dotfiles/vim/pack/colors/start/gruvbox8
+	url = https://github.com/lifepillar/vim-gruvbox8.git
+[submodule "dotfiles/vim/pack/colors/start/gruvbox"]
+	path = dotfiles/vim/pack/colors/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+[submodule "dotfiles/vim/pack/colors/start/solarized8"]
+	path = dotfiles/vim/pack/colors/start/solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule "dotfiles/vim/pack/colors/start/nord"]
+	path = dotfiles/vim/pack/colors/start/nord
+	url = https://github.com/nordtheme/vim.git
+[submodule "dotfiles/tmux/plugins/tpm"]
+	path = dotfiles/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "dotfiles/vim/pack/general/start/sensible"]
+	path = dotfiles/vim/pack/general/start/sensible
+	url = https://github.com/tpope/vim-sensible.git

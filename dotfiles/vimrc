@@ -65,14 +65,27 @@ nnoremap <C-n> :NERDTree<CR>
 let NERDTreeMinimalUI=1
 let NERDTreeWinSize=20
 
+" open floaterm window when running script
+function! s:run_floaterm_right(opts)
+    " asyncrun has temporarily changed working directory for you
+    " getcwd() in the runner function is the target directory defined in `-cwd=xxx`
+    let cwd = getcwd()
+    let cmd = 'FloatermNew --width=0.4 --height=1.0 --position=right --autoclose=2 ' . fnameescape(a:opts.cmd)
+    exec cmd
+endfunction
+
+" register custom asyncrun runner for file-run
+let g:asyncrun_runner = get(g:, 'asyncrun_runner', {})
+let g:asyncrun_runner.floaterm_right = function('s:run_floaterm_right')
+
 " open quickfix window to see command output. Number means window height
 let g:asyncrun_open = 10
 " close quickfix window in 0.5 s if command returned 0
 let g:asyncrun_exit = 'if g:asyncrun_code == 0 | call timer_start(100, {-> execute("cclose")}) | endif'
 " open new tab of size 20 col right from the current. Do not lose focuse of the current tab
-let g:asynctasks_term_pos = 'right'
-let g:asynctasks_term_cols = 20
+let g:asynctasks_term_pos = 'floaterm_right'
 let g:asynctasks_term_focus = 0
+
 " shortcuts for build and run with asynctasks. See vim/tasks.ini for task description
 noremap <silent><f5> :AsyncTask file-run<cr>
 noremap <silent><f9> :AsyncTask file-build<cr>

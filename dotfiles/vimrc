@@ -13,12 +13,6 @@ syntax on
 
 colorscheme nord
 
-" split navigations, use control + hjkl to navigate splitviews
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 " show line number
 set nu
 
@@ -70,7 +64,7 @@ function! s:run_floaterm_right(opts)
     " asyncrun has temporarily changed working directory for you
     " getcwd() in the runner function is the target directory defined in `-cwd=xxx`
     let cwd = getcwd()
-    let cmd = 'FloatermNew --width=0.4 --height=1.0 --position=right --autoclose=2 ' . fnameescape(a:opts.cmd)
+    let cmd = 'FloatermNew --width=0.4 --height=1.0 --position=right --autoclose=0 ' . fnameescape(a:opts.cmd)
     exec cmd
 endfunction
 

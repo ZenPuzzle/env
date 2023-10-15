@@ -49,3 +49,9 @@
 [submodule "dotfiles/vim/pack/general/start/floaterm"]
 	path = dotfiles/vim/pack/general/start/floaterm
 	url = https://github.com/voldikss/vim-floaterm
+[submodule "dotfiles/vim/pack/text/start/cursorword"]
+	path = dotfiles/vim/pack/text/start/cursorword
+	url = https://github.com/itchyny/vim-cursorword.git
+[submodule "dotfiles/vim/pack/general/start/vim-tmux-navigator"]
+	path = dotfiles/vim/pack/general/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git

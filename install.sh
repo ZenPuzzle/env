@@ -1,6 +1,6 @@
-#!/usr/bin bash
+#!/usr/bin/bash
 env_root=`realpath .`
-ln -s "$env_root/dotfiles/vimrc" ~/.vimrc
-ln -s "$env_root/dotfiles/vim" ~/.vim
-ln -s "$env_root/dotfiles/tmux.conf" ~/.tmux.conf
-ln -s "$env_root/dotfiles/tmux" ~/.tmux
+ln -fs "$env_root/dotfiles/vimrc" ~/.vimrc
+ln -fs "$env_root/dotfiles/vim" ~/.vim
+ln -fs "$env_root/dotfiles/tmux.conf" ~/.tmux.conf
+ln -fs "$env_root/dotfiles/tmux" ~/.tmux

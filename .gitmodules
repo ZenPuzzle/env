@@ -34,3 +34,15 @@
 [submodule "dotfiles/vim/pack/general/start/sensible"]
 	path = dotfiles/vim/pack/general/start/sensible
 	url = https://github.com/tpope/vim-sensible.git
+[submodule "dotfiles/vim/pack/general/start/lightline"]
+	path = dotfiles/vim/pack/general/start/lightline
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "dotfiles/vim/pack/vcs/start/gitgutter"]
+	path = dotfiles/vim/pack/vcs/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "dotfiles/tmux/plugins/nord-tmux"]
+	path = dotfiles/tmux/plugins/nord-tmux
+	url = https://github.com/arcticicestudio/nord-tmux.git
+[submodule "dotfiles/tmux/plugins/tmux-sensible"]
+	path = dotfiles/tmux/plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible.git

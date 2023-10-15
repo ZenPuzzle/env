@@ -32,9 +32,16 @@ set autoindent
 set fileformat=unix
 set backspace=indent,eol,start  " more powerful backspacing
 
+" delay before writing swap file
+set updatetime=50
+
 " hilight extra whitespaces
 highlight BadWhitespace ctermbg=red guibg=red
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" show status line when editing more than 1 file
+set laststatus=1
+let g:lightline = {'colorscheme': 'nord'}
 
 let g:ycm_autoclose_preview_window_after_completion=1
 
@@ -51,9 +58,6 @@ autocmd FileType python let b:ale_python_pylint_options =
    \ FindConfig('--rcfile=', 'pylint.rc', expand('<afile>:p:h', 1))
 " let g:ale_cpp_cc_executable = 'g++'
 let g:ale_cpp_cc_options = '-std=c++17 -Wall'
-
-" always show powerline
-" set laststatus=2
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif

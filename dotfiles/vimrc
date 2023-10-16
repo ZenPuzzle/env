@@ -76,10 +76,10 @@ let g:asyncrun_runner.floaterm_right = function('s:run_floaterm_right')
 let g:asyncrun_open = 10
 " close quickfix window in 0.5 s if command returned 0
 let g:asyncrun_exit = 'if g:asyncrun_code == 0 | call timer_start(100, {-> execute("cclose")}) | endif'
-" open new tab of size 20 col right from the current. Do not lose focuse of the current tab
-let g:asynctasks_term_pos = 'floaterm_right'
-let g:asynctasks_term_focus = 0
 
 " shortcuts for build and run with asynctasks. See vim/tasks.ini for task description
 noremap <silent><f5> :AsyncTask file-run<cr>
 noremap <silent><f9> :AsyncTask file-build<cr>
+
+" set shortcut to AsyncRun in right handed terminal split
+cnoreabbrev AR AsyncRun -mode=terminal -pos=right -cols=80 -focus=0

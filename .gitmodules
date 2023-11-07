@@ -55,3 +55,9 @@
 [submodule "dotfiles/vim/pack/general/start/vim-tmux-navigator"]
 	path = dotfiles/vim/pack/general/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "dotfiles/vim/pack/coding/start/ultisnips"]
+	path = dotfiles/vim/pack/coding/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "dotfiles/vim/pack/coding/start/vim_snippets"]
+	path = dotfiles/vim/pack/coding/start/vim_snippets
+	url = https://github.com/honza/vim-snippets.git

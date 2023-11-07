@@ -11,7 +11,8 @@ syntax enable
 let python_highlight_all=1
 syntax on
 
-colorscheme nord
+set background=dark
+colorscheme gruvbox
 
 " show line number
 set nu
@@ -82,4 +83,16 @@ noremap <silent><f5> :AsyncTask file-run<cr>
 noremap <silent><f9> :AsyncTask file-build<cr>
 
 " set shortcut to AsyncRun in right handed terminal split
-cnoreabbrev AR AsyncRun -mode=terminal -pos=right -cols=80 -focus=0
+cnoreabbrev AR AsyncRun -mode=terminal -pos=right -cols=80 -focus=0S
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+autocmd BufNewFile *.cpp    0read ~/.vim/skeletons/codeforces.cpp

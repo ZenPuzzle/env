@@ -51,7 +51,7 @@ autocmd FileType python let b:ale_python_pylint_options =
    \ get(g:, 'ale_python_pylint_options', '') .
    \ FindConfig('--rcfile=', 'pylint.rc', expand('<afile>:p:h', 1))
 " let g:ale_cpp_cc_executable = 'g++'
-let g:ale_cpp_cc_options = '-std=c++17 -Wall'
+let g:ale_cpp_cc_options = '-std=c++20 -Wall'
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif

@@ -3,34 +3,34 @@
 
 using namespace std;
 
-struct TTestCase {
-    /* define the input scheme here */
-    int i;
+class TTestCaseSolver {
+private:
+    int n;
 
-    TTestCase() = default;
+public:
+    TTestCaseSolver() = default;
 
-    static TTestCase read() {
+    TTestCaseSolver& Read() {
         /* read single testcase */
-        TTestCase test;
-        cin >> test.i;
-        return test;
+        cin >> n;
+        return *this;
+    }
+
+    void Solve() {
+        /* Run solution and print result to stdout */
+        cout << n;
     }
 };
-
-void Solution(const TTestCase& test) {
-    /* Run solution and print result to stdout */
-}
 
 int main() {
     int t;
     cin >> t;
-    vector<TTestCase> tests;
+    vector<TTestCaseSolver> tests;
     for (int i = 0; i < t; ++i) {
-        tests.emplace_back(TTestCase::read());
+        tests.emplace_back(TTestCaseSolver().Read());
     }
-
-    for (const TTestCase& test : tests) {
-        Solution(test);
+    for (TTestCaseSolver& solver: tests) {
+        solver.Solve();
     }
     return 0;
 }

@@ -11,8 +11,12 @@ syntax enable
 let python_highlight_all=1
 syntax on
 
-set background=dark
-colorscheme gruvbox
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" set background=dark
+colorscheme shades_of_purple
 
 " show line number
 set nu
@@ -68,7 +72,8 @@ function! s:run_floaterm_right(opts)
     " asyncrun has temporarily changed working directory for you
     " getcwd() in the runner function is the target directory defined in `-cwd=xxx`
     let cwd = getcwd()
-    let cmd = 'FloatermNew --width=0.4 --height=1.0 --position=right --autoclose=0 ' . fnameescape(a:opts.cmd)
+    exec 'FloatermKill floaterm_right'
+    let cmd = 'FloatermNew --name=floaterm_right --width=0.4 --height=1.0 --position=right --autoclose=0 ' . fnameescape(a:opts.cmd)
     exec cmd
 endfunction
 

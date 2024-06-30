@@ -66,4 +66,4 @@
 	url = https://github.com/egel/tmux-gruvbox.git
 [submodule "dotfiles/vim/pack/colors/start/shades_of_purple"]
 	path = dotfiles/vim/pack/colors/start/shades_of_purple
-	url = https://github.com/Rigellute/shades-of-purple.vim
+	url = https://github.com/Rigellute/shades-of-purple.vim.git

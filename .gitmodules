@@ -67,3 +67,6 @@
 [submodule "dotfiles/vim/pack/colors/start/shades_of_purple"]
 	path = dotfiles/vim/pack/colors/start/shades_of_purple
 	url = https://github.com/Rigellute/shades-of-purple.vim.git
+[submodule "dotfiles/tmux/plugins/tmux-yank"]
+	path = dotfiles/tmux/plugins/tmux-yank
+	url = git@github.com:tmux-plugins/tmux-yank.git

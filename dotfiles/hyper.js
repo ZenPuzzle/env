@@ -92,7 +92,7 @@ module.exports = {
         //
         // Cygwin
         // - Example: `C:\\cygwin64\\bin\\bash.exe`
-        shell: '/usr/bin/zsh',
+        shell: 'zsh',
         // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
         // by default `['--login']` will be used
         shellArgs: ['--login'],
@@ -153,17 +153,7 @@ module.exports = {
     // to load it and avoid it being `npm install`ed
     localPlugins: [],
     keymaps: {
-        "window:devtools": "ctrl+shift+i",
-        "window:reload": "ctrl+shift+r",
-        "window:reloadFull": "ctrl+shift+f5",
-        "window:preferences": "ctrl+,",
-        "window:hamburgerMenu": "alt+f",
-        "zoom:reset": "ctrl+0",
-        "zoom:in": "ctrl+=",
-        "zoom:out": "ctrl+-",
-        "window:new": "ctrl+shift+n",
-        "window:minimize": "ctrl+shift+m",
-        "window:zoom": "ctrl+shift+alt+m",
+        /* Linux keymaps */
         "window:toggleFullScreen": "f11",
         "window:close": "ctrl+q",
         "tab:new": "ctrl+t",
@@ -185,25 +175,7 @@ module.exports = {
         "pane:splitRight": "ctrl+d",
         "pane:splitDown": "ctrl+shift+d",
         "pane:close": "ctrl+shift+w",
-        "editor:undo": "ctrl+shift+z",
-        "editor:redo": "ctrl+shift+y",
-        "editor:cut": "ctrl+shift+x",
-        "editor:copy": "ctrl+shift+c",
-        "editor:paste": "ctrl+shift+v",
-        "editor:selectAll": "ctrl+shift+a",
-        "editor:search": "ctrl+shift+f",
-        "editor:search-close": "esc",
-        "editor:movePreviousWord": "ctrl+left",
-        "editor:moveNextWord": "ctrl+right",
-        "editor:moveBeginningLine": "home",
-        "editor:moveEndLine": "end",
-        "editor:deletePreviousWord": "ctrl+backspace",
-        "editor:deleteNextWord": "ctrl+del",
-        "editor:deleteBeginningLine": "ctrl+home",
-        "editor:deleteEndLine": "ctrl+end",
-        "editor:clearBuffer": "ctrl+shift+k",
-        "editor:break": "ctrl+c",
-        "plugins:update": "ctrl+shift+u"
+        /* MacOS keymaps */
     },
 };
 //# sourceMappingURL=config-default.js.map

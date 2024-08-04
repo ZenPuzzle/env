@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-env_root=`realpath .`
+env_root=`realpath "$PWD"`
 dotfiles=("vimrc" "vim" "tmux.conf" "tmux" "hyper.js" "aider.conf.yml")
 
 for file in "${dotfiles[@]}"; do

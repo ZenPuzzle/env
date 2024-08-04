@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 env_root=`realpath "$PWD"`
-dotfiles=("vimrc" "vim" "tmux.conf" "tmux" "aider.conf.yml")
+dotfiles=("tmux.conf" "tmux" "aider.conf.yml")
 
 for file in "${dotfiles[@]}"; do
   if [ -e "$HOME/.$file" ]; then

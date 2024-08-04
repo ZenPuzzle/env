@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 env_root=`realpath "$PWD"`
-dotfiles=("vimrc" "vim" "tmux.conf" "tmux" "hyper.js" "aider.conf.yml")
+dotfiles=("vimrc" "vim" "tmux.conf" "tmux" "aider.conf.yml")
 
 for file in "${dotfiles[@]}"; do
   if [ -e "$HOME/.$file" ]; then
@@ -9,3 +9,9 @@ for file in "${dotfiles[@]}"; do
     ln -fs "$env_root/dotfiles/$file" "$HOME/.$file"
   fi
 done
+
+if command -v hyper &> /dev/null; then
+  ln -fs "$env_root/dotfiles/hyper.js" "$HOME/.hyper.js"
+else
+  echo "Warning: Hyper executable not found. Skipping link for hyper.js."
+fi

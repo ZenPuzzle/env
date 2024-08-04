@@ -15,3 +15,9 @@ if command -v hyper &> /dev/null; then
 else
   echo "Warning: Hyper executable not found. Skipping link for hyper.js."
 fi
+
+if command -v alacritty &> /dev/null; then
+  ln -fs "$env_root/dotfiles/alacritty.yml" "$HOME/.alacritty.yml"
+else
+  echo "Warning: Alacritty executable not found. Skipping link for alacritty.yml."
+fi

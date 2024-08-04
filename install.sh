@@ -10,6 +10,13 @@ for file in "${dotfiles[@]}"; do
   fi
 done
 
+if command -v vim &> /dev/null; then
+  ln -fs "$env_root/dotfiles/vim" "$HOME/.vim"
+  ln -fs "$env_root/dotfiles/vimrc" "$HOME/.vimrc"
+else
+  echo "Warning: Vim executable not found. Skipping links for vim and vimrc."
+fi
+
 if command -v hyper &> /dev/null; then
   ln -fs "$env_root/dotfiles/hyper.js" "$HOME/.hyper.js"
 else

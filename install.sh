@@ -6,7 +6,15 @@ for file in "${dotfiles[@]}"; do
   if [ -e "$HOME/.$file" ]; then
     echo "Warning: ~/.$file already exists."
   else
-    ln -fs "$env_root/dotfiles/$file" "$HOME/.$file"
+    if [ "$file" = "aider.conf.yml" ]; then
+      if command -v aider &> /dev/null; then
+        ln -fs "$env_root/dotfiles/$file" "$HOME/.$file"
+      else
+        echo "Warning: Aider executable not found. Skipping link for aider.conf.yml."
+      fi
+    else
+      ln -fs "$env_root/dotfiles/$file" "$HOME/.$file"
+    fi
   fi
 done
 

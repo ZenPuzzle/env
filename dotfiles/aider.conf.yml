@@ -24,7 +24,7 @@
 #anthropic-api-key:
 
 ## Specify the model to use for the main chat
-model: openai/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct-fast
+model: openai/meta-llama/Meta-Llama-3.1-405B-Instruct
 
 ## Use claude-3-opus-20240229 model for the main chat
 #opus: false

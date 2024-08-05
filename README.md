@@ -46,6 +46,7 @@ The following tools have their configuration files managed by this repository:
 - The installation script checks for the existence of the target files before creating symlinks.
 - If a tool executable is not found, the corresponding symlink will not be created, and a warning will be printed.
 - For `vim` to work properly, YouCompleteMe needs to be installed separately by running `python install.py` in the YouCompleteMe directory.
+- For `aider` to work properly, the `OPENAI_API_KEY` environment variable needs to be set.
 
 ## Contributing
 

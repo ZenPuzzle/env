@@ -39,6 +39,7 @@ The following tools have their configuration files managed by this repository:
 - `vim`
 - `hyper`
 - `alacritty`
+- `aider`
 
 ## Notes
 

@@ -8,12 +8,12 @@ To install the dotfiles, follow these steps:
 
 1. Clone the repository to your local machine:
    ```sh
-   git clone https://github.com/ZenPuzzle/dotfiles.git
-   cd dotfiles
+   git clone --recursive https://github.com/ZenPuzzle/dotfiles.git
    ```
 
 2. Run the installation script:
    ```sh
+   cd env
    ./install.sh
    ```
 

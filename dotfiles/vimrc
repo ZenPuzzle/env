@@ -40,7 +40,7 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " show status line when editing more than 1 file
 set laststatus=1
-let g:lightline = {'colorscheme': 'nord'}
+let g:lightline = {'colorscheme': 'shades_of_purple'}
 
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'

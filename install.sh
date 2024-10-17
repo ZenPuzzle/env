@@ -22,7 +22,11 @@ for i in "${!dotfiles[@]}"; do
 done
 
 if ! command -v nvim &> /dev/null; then
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install neovim
+  else
     sudo apt-get install neovim python3-neovim -y
+  fi
 fi
 
 if ! command -v conda &> /dev/null; then

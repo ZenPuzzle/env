@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+set -eu
 env_root=`realpath "$PWD"`
 
 create_link() {

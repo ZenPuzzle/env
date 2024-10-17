@@ -37,6 +37,10 @@ if ! command -v zsh &> /dev/null; then
   fi
 fi
 
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 if ! command -v conda &> /dev/null; then
     mkdir -p ~/miniconda3
     if [[ "$OSTYPE" == "darwin"* ]]; then

@@ -29,6 +29,14 @@ if ! command -v nvim &> /dev/null; then
   fi
 fi
 
+if ! command -v zsh &> /dev/null; then
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install zsh
+  else
+    sudo apt-get install zsh -y
+  fi
+fi
+
 if ! command -v conda &> /dev/null; then
     mkdir -p ~/miniconda3
     if [[ "$OSTYPE" == "darwin"* ]]; then

@@ -34,7 +34,7 @@ create_link() {
   fi
 }
 
-dotfiles=("tmux.conf" "tmux" "aider.conf.yml" "vim" "vimrc" "hyper.js" "alacritty.yml" "config/nvim/init.vim")
+dotfiles=("tmux.conf" "tmux" "aider.conf.yml" "vim" "vimrc" "hyper.js" "alacritty.yml" "config/nvim")
 executables=("" "" "aider" "vim" "vim" "hyper" "alacritty" "nvim")
 
 for i in "${!dotfiles[@]}"; do

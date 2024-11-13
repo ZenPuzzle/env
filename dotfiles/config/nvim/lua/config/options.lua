@@ -8,3 +8,4 @@ vim.g.autoformat = true
 local opt = vim.opt
 opt.wrap = true
 opt.cursorline = false -- Enable highlighting of the current line
+opt.clipboard = "" -- Do not sync with system clipboard

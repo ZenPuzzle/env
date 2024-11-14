@@ -14,7 +14,15 @@ return {
   {
     "akinsho/toggleterm.nvim",
     version = "*",
-    config = true,
+    config = function()
+      require("toggleterm").setup({
+        on_start = function(term)
+          if vim.fn.getenv("CONDA_SHLVL") ~= "1" then
+            vim.fn.chansend(term.jobid, "conda deactivate\n")
+          end
+        end,
+      })
+    end,
   },
   -- use TAB for completions
   {

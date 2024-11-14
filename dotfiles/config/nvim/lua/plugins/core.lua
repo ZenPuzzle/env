@@ -16,6 +16,7 @@ return {
     version = "*",
     config = true,
   },
+  -- use TAB for completions
   {
     "hrsh7th/nvim-cmp",
     ---@param opts cmp.ConfigSchema

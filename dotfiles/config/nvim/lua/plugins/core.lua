@@ -16,7 +16,7 @@ return {
     version = "*",
     config = function()
       require("toggleterm").setup({
-        on_start = function(term)
+        on_open = function(term)
           if vim.fn.getenv("CONDA_SHLVL") ~= "1" then
             vim.fn.chansend(term.jobid, "conda deactivate\n")
           end

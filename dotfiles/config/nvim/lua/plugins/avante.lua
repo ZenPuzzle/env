@@ -1,53 +1,22 @@
 return {
   "yetone/avante.nvim",
-  enabled = false,
+  enabled = true,
   event = "VeryLazy",
   lazy = false,
   version = false, -- set this if you want to always pull the latest change
   opts = {
-    -- add any opts here
-    provider = "nebius",
-    vendors = {
-      ---@type AvanteProvider
-      nebius = {
-        endpoint = "https://api.studio.nebius.ai/v1/chat/completions", -- The full endpoint of the provider
-        model = "Qwen/Qwen2.5-72B-Instruct-fast", -- The model name to use with this provider
-        api_key_name = "NEBIUS_API_KEY", -- The name of the environment variable that contains the API key
-        --- This function below will be used to parse in cURL arguments.
-        --- It takes in the provider options as the first argument, followed by code_opts retrieved from given buffer.
-        --- This code_opts include:
-        --- - question: Input from the users
-        --- - code_lang: the language of given code buffer
-        --- - code_content: content of code buffer
-        --- - selected_code_content: (optional) If given code content is selected in visual mode as context.
-        parse_curl_args = function(opts, code_opts)
-          return {
-            url = opts.endpoint,
-            headers = {
-              ["Accept"] = "application/json",
-              ["Content-Type"] = "application/json",
-              ["Authorization"] = "Bearer " .. os.getenv(opts.api_key_name),
-            },
-            body = {
-              model = opts.model,
-              messages = { -- you can make your own message, but this is very advanced
-                { role = "system", content = code_opts.system_prompt },
-                { role = "user", content = require("avante.providers.openai").get_user_message(code_opts) },
-              },
-              temperature = 0,
-              max_tokens = 8192,
-              stream = false, -- this will be set by default.
-            },
-          }
-        end,
-        -- The below function is used if the vendors has specific SSE spec that is not claude or openai.
-        parse_response = function(data_stream, event_state, opts)
-          require("avante.providers").openai.parse_response(data_stream, event_state, opts)
-        end,
-        parse_response_without_stream = function(data_stream, event_state, opts)
-          require("avante.providers").openai.parse_response_without_stream(data_stream, event_state, opts)
-        end,
-      },
+    -- add any opts hereby
+    provider = "openai",
+    auto_suggestions_provider = "openai",
+    openai = {
+      endpoint = "https://api.studio.nebius.ai/v1",
+      api_key_name = "NEBIUS_API_KEY",
+      model = "Qwen/Qwen2.5-Coder-32B-Instruct-fast",
+      temperature = 0,
+      max_tokens = 8192,
+    },
+    behaviour = {
+      auto_suggestions = true,
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`

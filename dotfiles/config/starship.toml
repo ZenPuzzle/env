@@ -18,6 +18,7 @@ format = '\[[$symbol($version)]($style)\]'
 
 [conda]
 format = '\[[$symbol$environment]($style)\]'
+ignore_base = false
 
 [crystal]
 format = '\[[$symbol($version)]($style)\]'
@@ -30,6 +31,9 @@ format = '\[[$symbol($version)]($style)\]'
 
 [deno]
 format = '\[[$symbol($version)]($style)\]'
+
+[directory]
+fish_style_pwd_dir_length = 1
 
 [docker_context]
 format = '\[[$symbol$context]($style)\]'

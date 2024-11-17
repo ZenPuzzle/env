@@ -30,6 +30,8 @@ Here's a list of the files managed by this repository:
 - `vimrc`
 - `hyper.js`
 - `alacritty.yml`
+- `config/nvim` (directory)
+- `config/starship.toml`
 
 ## Tools
 
@@ -40,6 +42,8 @@ The following tools have their configuration files managed by this repository:
 - `hyper`
 - `alacritty`
 - `aider`
+- `nvim`
+- `starship`
 
 ## Notes
 

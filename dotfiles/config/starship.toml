@@ -1,3 +1,12 @@
+# A minimal left prompt
+format = """$directory$character"""
+
+# move the rest of the prompt to the right
+right_format = """$all"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 symbol = "  "
@@ -183,6 +192,7 @@ format = '\[[$symbol$stack]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [python]
+disabled = true 
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 symbol = " "
 

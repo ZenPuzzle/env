@@ -1,3 +1,7 @@
+[hostname]
+format = '[$hostname:]($style)'
+aliases = { "computeinstance-e00yd3djngrfhna7rh" = "h100x8" }
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 symbol = "  "
@@ -222,7 +226,8 @@ format = '\[[$symbol$workspace]($style)\]'
 format = '\[[$time]($style)\]'
 
 [username]
-format = '\[[$user]($style)\]'
+disabled = true
+format = '[$user@]($style)'
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'

@@ -6,7 +6,12 @@ if ! command -v nvim &>/dev/null; then
   if [[ "$OSTYPE" == "darwin"* ]]; then
     brew install neovim
   else
-    sudo apt-get install neovim python3-neovim -y
+    sudo apt-get install python3-neovim -y
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    chmod u+x nvim.appimage
+    mkdir -p ~/bin
+    mv nvim.appimage ~/bin
+    ln -s ~/bin/nvim.appimage ~/bin/nvim
   fi
 fi
 
@@ -45,6 +50,8 @@ create_link() {
 dotfiles=("tmux.conf" "tmux" "aider.conf.yml" "vim" "vimrc" "hyper.js" "alacritty.yml" "config/nvim" "config/starship.toml")
 executables=("" "" "aider" "vim" "vim" "hyper" "alacritty" "nvim" "starship")
 
+mkdir -p ~/.config
+
 for i in "${!dotfiles[@]}"; do
   create_link "${dotfiles[$i]}" "${executables[$i]}"
 done
@@ -58,6 +65,6 @@ if ! command -v conda &>/dev/null; then
   fi
   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
   rm ~/miniconda3/miniconda.sh
-  source miniconda3/bin/activate
+  source ~/miniconda3/bin/activate
   conda init --all
 fi

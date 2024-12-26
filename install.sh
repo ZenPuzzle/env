@@ -2,6 +2,8 @@
 set -eu
 env_root=$(realpath "$PWD")
 
+echo 123
+
 if ! command -v nvim &>/dev/null; then
   if [[ "$OSTYPE" == "darwin"* ]]; then
     brew install neovim

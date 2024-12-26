@@ -3,9 +3,10 @@
 -- Add any additional options here
 
 -- LazyVim auto format
-vim.g.autoformat = true
+vim.g.autoformat = false
+vim.g.snacks_animate = false
 
 local opt = vim.opt
 opt.wrap = true
 opt.cursorline = false -- Enable highlighting of the current line
-opt.clipboard = "" -- Do not sync with system clipboard
+opt.clipboard = ""     -- Do not sync with system clipboard
